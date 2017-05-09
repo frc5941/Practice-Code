@@ -3,7 +3,7 @@ package org.usfirst.frc.team5941.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
+import edu.wpi.first.wpilibj.VictorSP;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the IterativeRobot
@@ -16,6 +16,8 @@ public class Robot extends IterativeRobot {
 	final String customAuto = "My Auto";
 	String autoSelected;
 	SendableChooser<String> chooser = new SendableChooser<>();
+	VictorSP leftSide = new VictorSP(0);
+	VictorSP rightSide = new VictorSP(1);
 
 	/**
 	 * This function is run when the robot is first started up and should be
