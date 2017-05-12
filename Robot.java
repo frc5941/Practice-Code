@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
 	VictorSP ballIntake = new VictorSP(9);
 	VictorSP leftSideB = new VictorSP(2);
 	VictorSP rightSideB = new VictorSP(3);
-	VictorSP ballShooter = new VictorSP(4);
+	VictorSP ballShooter = new VictorSP(8);
 	XboxController xbox = new XboxController(0);
 	
 	/**
