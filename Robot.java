@@ -73,15 +73,23 @@ public class Robot extends IterativeRobot {
 
 	/**
 	 * This function is called periodically during operator control
+	 This makes the buttons on the controller do the controlling.
 	 */
 	@Override
 	public void teleopPeriodic() {
-		leftSide.set(-xbox.getRawAxis(1)*0.2);
-		rightSide.set(xbox.getRawAxis(5)*0.2);
-		leftSideB.set(-xbox.getRawAxis(1)*0.2);
-		rightSideB.set(xbox.getRawAxis(5)*0.2);
-		ballIntake.set(-xbox.getRawAxis(2)*0.35);
-		ballShooter.set(xbox.getRawAxis(3)*0.35);
+		leftSide.set(-xbox.getRawAxis(1) * 0.2);
+		rightSide.set(xbox.getRawAxis(5) * 0.2);
+		leftSideB.set(-xbox.getRawAxis(1) * 0.2);
+		rightSideB.set(xbox.getRawAxis(5) * 0.2);
+		
+		//ballIntake.set(-xbox.getRawAxis(2)*0.35);
+		ballShooter.set(xbox.getRawAxis(3)*0.5);
+		
+		if (xbox.getRawButton(4)) {
+			ballIntake.set(0.3);
+		} else {
+			ballIntake.set(0);
+		}
 	}
 
 	/**
