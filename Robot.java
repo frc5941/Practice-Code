@@ -80,8 +80,8 @@ public class Robot extends IterativeRobot {
 		rightSide.set(-xbox.getRawAxis(5)*0.2);
 		leftSideB.set(xbox.getRawAxis(1)*0.2);
 		rightSideB.set(-xbox.getRawAxis(5)*0.2);
-		ballIntake.set(-xbox.getRawAxis(2)*0.75);
-		ballShooter.set(xbox.getRawAxis(3)*0.75);
+		ballIntake.set(-xbox.getRawAxis(2)*0.35);
+		ballShooter.set(xbox.getRawAxis(3)*0.35);
 	}
 
 	/**
