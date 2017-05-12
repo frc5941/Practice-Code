@@ -19,6 +19,10 @@ public class Robot extends IterativeRobot {
 	SendableChooser<String> chooser = new SendableChooser<>();
 	VictorSP leftSide = new VictorSP(0);
 	VictorSP rightSide = new VictorSP(1);
+	VictorSP ballIntake = new VictorSP(9);
+	VictorSP leftSideB = new VictorSP(2);
+	VictorSP rightSideB = new VictorSP(3);
+	VictorSP ballShooter = new VictorSP(4);
 	XboxController xbox = new XboxController(0);
 	
 	/**
@@ -74,6 +78,10 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		leftSide.set(xbox.getRawAxis(1)*0.2);
 		rightSide.set(-xbox.getRawAxis(5)*0.2);
+		leftSideB.set(xbox.getRawAxis(1)*0.2);
+		rightSideB.set(-xbox.getRawAxis(5)*0.2);
+		ballIntake.set(-xbox.getRawAxis(2)*0.75);
+		ballShooter.set(xbox.getRawAxis(3)*0.75);
 	}
 
 	/**
